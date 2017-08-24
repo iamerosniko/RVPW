@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DisProgramsComponent } from './dis-programs.component';
+import { InfoSecComponent } from './info-sec.component';
 
-describe('DisProgramsComponent', () => {
-  let component: DisProgramsComponent;
-  let fixture: ComponentFixture<DisProgramsComponent>;
+describe('InfoSecComponent', () => {
+  let component: InfoSecComponent;
+  let fixture: ComponentFixture<InfoSecComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DisProgramsComponent ]
+      declarations: [ InfoSecComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DisProgramsComponent);
+    fixture = TestBed.createComponent(InfoSecComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
