@@ -8,6 +8,8 @@ import { CreateTitleModule } from './mod_create_title/create_title.module';
 import { InfoModule } from './com_info/info.module';
 
 import { AppComponent } from './app.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   imports: [
@@ -19,7 +21,9 @@ import { AppComponent } from './app.component';
     InfoModule
   ],
   declarations: [
-    AppComponent
+    AppComponent,
+    WelcomeComponent,
+    DashboardComponent
   ],
   providers: [
   ],
