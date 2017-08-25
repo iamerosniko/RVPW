@@ -22,7 +22,6 @@ import { AppComponent } from './app.component';
   ],
   declarations: [
     AppComponent,
-    WelcomeComponent,
   ],
   providers: [
   ],
