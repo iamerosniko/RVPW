@@ -24,7 +24,8 @@
     		"assets/css/Checkboxes.css",
         "../node_modules/bootstrap/dist/css/bootstrap.css",
         "../node_modules/bootstrap/dist/css/bootstrap-theme.css",
-    		"assets/css/Site.css"
+    		"assets/css/Site.css",
+        "assets/css/sidenav.css"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.js",
