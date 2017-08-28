@@ -17,7 +17,10 @@ const routes: Routes = [
         path : 'workplace' , component:WorkplaceComponent ,
         children : [
             { path: '', redirectTo: 'mission-vision', pathMatch: 'full' },
-            { path:'mission-vision', component: MissionVisionComponent }
+            { path:'mission-vision', component: MissionVisionComponent },
+            { path:'org-chart', component: OrgChartComponent },
+            { path:'strategies', component: StrategiesComponent },
+            { path:'functional-towers', component: FunctionalTowersComponent },
         ]
     }
     

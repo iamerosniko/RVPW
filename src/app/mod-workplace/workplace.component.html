@@ -12,10 +12,10 @@
                     <span class="logo-lg"><i class="fa fa-university"></i> DIS Overview</span>
                 </a>
                 <div id="disoverwiew" class="sublinks collapse">
-                    <a [routerLink]="['mission-vision']"class="list-group-item small" (click)="activeLink=1; " [ngClass]="{'active' : activeLink==1}"><i ></i> DIS Mission - Vision</a>
-                    <a routerLink="/organization" class="list-group-item small" (click)="activeLink=2" [ngClass]="{'active' : activeLink==2}"><i ></i> Organizational Chart</a>
-                    <a routerLink="/strategies" class="list-group-item small" (click)="activeLink=3" [ngClass]="{'active' : activeLink==3}"><i ></i> Strategies</a>
-                    <a routerLink="/Functional-Tower" class="list-group-item small" (click)="activeLink=4" [ngClass]="{'active' : activeLink==4}"><i ></i> Functional Towers</a>
+                    <a [routerLink]="['mission-vision']" class="list-group-item small" (click)="activeLink=1; " [ngClass]="{'active' : activeLink==1}"><i ></i> DIS Mission - Vision</a>
+                    <a [routerLink]="['org-chart']" class="list-group-item small" (click)="activeLink=2" [ngClass]="{'active' : activeLink==2}"><i ></i> Organizational Chart</a>
+                    <a [routerLink]="['strategies']"  class="list-group-item small" (click)="activeLink=3" [ngClass]="{'active' : activeLink==3}"><i ></i> Strategies</a>
+                    <a [routerLink]="['functional-towers']"  class="list-group-item small" (click)="activeLink=4" [ngClass]="{'active' : activeLink==4}"><i ></i> Functional Towers</a>
                     <a (click)="routeWithID('Programs','Aspire'); activeLink=5;" class="list-group-item small accordion-toggle" data-toggle="collapse" data-target="#programs_lg"><i ></i> Programs</a>
                     <div id="programs_lg" class="sublinks collapse">
                         <a (click)="routeWithID('Programs','Aspire');" (click)="activeLink=5" class="list-group-item small" [ngClass]="{'active' : activeLink==5}"><i ></i> Aspire</a>

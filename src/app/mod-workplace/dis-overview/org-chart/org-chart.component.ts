@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StaticResources } from '../../../com_entities/static-resources';
 
 @Component({
   selector: 'app-org-chart',
@@ -8,8 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class OrgChartComponent implements OnInit {
 
   constructor() { }
-
+  breadcrumbs =['DIS Overview' ,'Organizational Structure'];
+  slides:any;
   ngOnInit() {
+    this.slides=StaticResources.ORGCHART();
   }
 
 }
