@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StaticResources } from '../../../../com_entities/static-resources';
 
 @Component({
   selector: 'app-motivate',
@@ -9,7 +10,11 @@ export class MotivateComponent implements OnInit {
 
   constructor() { }
 
+  breadcrumbs =['DIS Overview','Programs' ,'Motivate'];
+  slides:any;
+
   ngOnInit() {
+    this.slides=StaticResources.MOTIVATE();
   }
 
 }

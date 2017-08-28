@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StaticResources } from '../../../com_entities/static-resources';
 
 @Component({
   selector: 'app-khronos',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class KhronosComponent implements OnInit {
 
   constructor() { }
-
+  path:string=StaticResources.KHRONOS;
   ngOnInit() {
   }
 

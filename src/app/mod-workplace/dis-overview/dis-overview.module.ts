@@ -7,9 +7,10 @@ import { StrategiesComponent } from './strategies/strategies.component';
 import { DisOverviewRouting } from './dis-overview-routing';
 
 import { ModCommonModule } from '../../mod-common/mod-common.module';
+import { ProgramsModule } from './programs/programs.module';
 @NgModule({
   imports: [
-    CommonModule,ModCommonModule,DisOverviewRouting
+    CommonModule,ModCommonModule,DisOverviewRouting,ProgramsModule
   ],
   declarations: [OrgChartComponent, MissionVisionComponent, FunctionalTowersComponent, StrategiesComponent],
 })

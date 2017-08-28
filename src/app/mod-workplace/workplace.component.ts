@@ -12,7 +12,7 @@ export class WorkplaceComponent implements OnInit {
   ngOnInit() {
   }
 
-  routeTo(path:string){
-    this.router.navigate(['/', {outlets: {'wp': [path]}}]);
+  routeToPath(path:string){
+    this.router.navigate(['/'+path]);
   }
 }

@@ -8,7 +8,7 @@
                 </a>
                 <!--DIS Overview-->
                 <!--This button displays when in large screen mode-->
-                <a (click)="activeLink=1;" class="list-group-item accordion-toggle logo-lg" data-toggle="collapse" data-target="#disoverwiew" data-parent="#accordion">
+                <a (click)="activeLink=1;routeToPath('workplace/mission-vision')" class="list-group-item accordion-toggle logo-lg" data-toggle="collapse" data-target="#disoverwiew" data-parent="#accordion">
                     <span class="logo-lg"><i class="fa fa-university"></i> DIS Overview</span>
                 </a>
                 <div id="disoverwiew" class="sublinks collapse">
@@ -16,34 +16,34 @@
                     <a [routerLink]="['org-chart']" class="list-group-item small" (click)="activeLink=2" [ngClass]="{'active' : activeLink==2}"><i ></i> Organizational Chart</a>
                     <a [routerLink]="['strategies']"  class="list-group-item small" (click)="activeLink=3" [ngClass]="{'active' : activeLink==3}"><i ></i> Strategies</a>
                     <a [routerLink]="['functional-towers']"  class="list-group-item small" (click)="activeLink=4" [ngClass]="{'active' : activeLink==4}"><i ></i> Functional Towers</a>
-                    <a (click)="routeWithID('Programs','Aspire'); activeLink=5;" class="list-group-item small accordion-toggle" data-toggle="collapse" data-target="#programs_lg"><i ></i> Programs</a>
+                    <a (click)="activeLink=5; routeToPath('workplace/aspire')" class="list-group-item small accordion-toggle" data-toggle="collapse" data-target="#programs_lg"><i ></i> Programs</a>
                     <div id="programs_lg" class="sublinks collapse">
-                        <a (click)="routeWithID('Programs','Aspire');" (click)="activeLink=5" class="list-group-item small" [ngClass]="{'active' : activeLink==5}"><i ></i> Aspire</a>
-                        <a (click)="routeWithID('Programs','Cares');" (click)="activeLink=6" class="list-group-item small"  [ngClass]="{'active' : activeLink==6}"><i ></i> Cares</a>
-                        <a (click)="routeWithID('Programs','Careers');" (click)="activeLink=7" class="list-group-item small" [ngClass]="{'active' : activeLink==7}"><i ></i> Careers</a>
-                        <a (click)="routeWithID('Programs','Digerati');" (click)="activeLink=8" class="list-group-item small"[ngClass]="{'active' : activeLink==8}"><i ></i> Digerati</a>
-                        <a (click)="routeWithID('Programs','Motivate');" (click)="activeLink=9" class="list-group-item small"[ngClass]="{'active' : activeLink==9}"><i ></i> Motivate</a>
+                        <a [routerLink]="['aspire']" (click)="activeLink=5" class="list-group-item small" [ngClass]="{'active' : activeLink==5}"><i ></i> Aspire</a>
+                        <a [routerLink]="['cares']" (click)="activeLink=6" class="list-group-item small"  [ngClass]="{'active' : activeLink==6}"><i ></i> Cares</a>
+                        <a [routerLink]="['careers']" (click)="activeLink=7" class="list-group-item small" [ngClass]="{'active' : activeLink==7}"><i ></i> Careers</a>
+                        <a [routerLink]="['digerati']" (click)="activeLink=8" class="list-group-item small"[ngClass]="{'active' : activeLink==8}"><i ></i> Digerati</a>
+                        <a [routerLink]="['motivate']" (click)="activeLink=9" class="list-group-item small"[ngClass]="{'active' : activeLink==9}"><i ></i> Motivate</a>
                     </div>
                 </div>
                 <!--This button displays when in small screen mode-->
                 <div class="dropdown">
-                    <a (click)="routeWOUserName('mission-vision'); activeLink=1;" class="list-group-item logo-mini">
+                    <a (click)="activeLink=1; routeToPath('workplace/mission-vision')" class="list-group-item logo-mini">
                         <i  class="fa fa-university fa-lg"></i>
                     </a>
                     <ul class="dropdown-menu">
                         <li class="dropdown-header">DIS Overview</li>
-                        <li><a routerLink="/mission-vision" (click)="activeLink=1" [ngClass]="{'active' : activeLink==1}"><i ></i> DIS Mission - Vision</a></li>
-                        <li><a routerLink="/organization" (click)="activeLink=2" [ngClass]="{'active' : activeLink==2}"><i ></i> Organizational Chart</a></li>
-                        <li><a routerLink="/strategies" (click)="activeLink=3" [ngClass]="{'active' : activeLink==3}"><i ></i> Strategies</a></li>
-                        <li><a routerLink="/Functional-Tower" (click)="activeLink=4" [ngClass]="{'active' : activeLink==4}"><i ></i>Functional Towers</a></li>
+                        <li><a [routerLink]="['mission-vision']" (click)="activeLink=1" [ngClass]="{'active' : activeLink==1}"><i ></i> DIS Mission - Vision</a></li>
+                        <li><a [routerLink]="['org-chart']" (click)="activeLink=2" [ngClass]="{'active' : activeLink==2}"><i ></i> Organizational Chart</a></li>
+                        <li><a [routerLink]="['strategies']" (click)="activeLink=3" [ngClass]="{'active' : activeLink==3}"><i ></i> Strategies</a></li>
+                        <li><a [routerLink]="['functional-towers']" (click)="activeLink=4" [ngClass]="{'active' : activeLink==4}"><i ></i>Functional Towers</a></li>
                         <li class="dropdown">
-                            <a (click)="routeWithID('Programs','Aspire'); activeLink=5;"><i ></i> Programs<span class="glyphicon glyphicon-chevron-right pull-right" style="padding-top:2px;"></span></a>
+                            <a (click)="activeLink=5; routeToPath('workplace/aspire')"><i ></i> Programs<span class="glyphicon glyphicon-chevron-right pull-right" style="padding-top:2px;"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a (click)="routeWithID('Programs','Aspire'); activeLink=5;" [ngClass]="{'active' : activeLink==5}"><i ></i> Aspire</a></li>
-                                <li><a (click)="routeWithID('Programs','Cares'); activeLink=6;" [ngClass]="{'active' : activeLink==6}"><i ></i> Cares</a></li>
-                                <li><a (click)="routeWithID('Programs','Careers'); activeLink=7;" [ngClass]="{'active' : activeLink==7}"><i ></i> Careers</a></li>
-                                <li><a (click)="routeWithID('Programs','Digerati'); activeLink=8;" [ngClass]="{'active' : activeLink==8}"><i ></i> Digerati</a></li>
-                                <li><a (click)="routeWithID('Programs','Motivate'); activeLink=9;" [ngClass]="{'active' : activeLink==9}"><i ></i> Motivate</a></li>
+                                <li><a [routerLink]="['aspire']" (click)="activeLink=5;" [ngClass]="{'active' : activeLink==5}"><i ></i> Aspire</a></li>
+                                <li><a [routerLink]="['cares']" (click)="activeLink=6;" [ngClass]="{'active' : activeLink==6}"><i ></i> Cares</a></li>
+                                <li><a [routerLink]="['careers']" (click)="activeLink=7;" [ngClass]="{'active' : activeLink==7}"><i ></i> Careers</a></li>
+                                <li><a [routerLink]="['digerati']" (click)="activeLink=8;" [ngClass]="{'active' : activeLink==8}"><i ></i> Digerati</a></li>
+                                <li><a [routerLink]="['motivate']" (click)="activeLink=9;" [ngClass]="{'active' : activeLink==9}"><i ></i> Motivate</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -51,7 +51,7 @@
                 <!--DIS Overview-->
                 <!--Team Overview-->
                 <!--This button displays when in large screen mode-->
-                <a (click)="routeWOUserName('Team-Org'); activeLink=10;" class="list-group-item accordion-toggle logo-lg" data-toggle="collapse" data-target="#teamoverwiew" data-parent="#accordion">
+                <a (click)="activeLink=10;" class="list-group-item accordion-toggle logo-lg" data-toggle="collapse" data-target="#teamoverwiew" data-parent="#accordion">
                     <span class="logo-lg"><i class="fa fa-users"></i> Team Overview</span>
                 </a>
                 <div id="teamoverwiew" class="sublinks collapse">
@@ -107,26 +107,26 @@
                 <!--Leaders Video-->
                 <!--DIS Tools-->
                 <!--This button displays when in large screen mode-->
-                <a (click)="routeWOUserName('opt'); activeLink=16;" class="list-group-item accordion-toggle logo-lg" data-toggle="collapse" data-target="#distools" data-parent="#accordion">
+                <a (click)="routeToPath('workplace/opt'); activeLink=16;" class="list-group-item accordion-toggle logo-lg" data-toggle="collapse" data-target="#distools" data-parent="#accordion">
                     <i class="fa fa-wrench"></i> DIS Tools
                 </a>
                 <div id="distools" class="sublinks collapse">
-                    <a routerLink="/opt" (click)="activeLink=16" class="list-group-item small" [ngClass]="{'active' : activeLink==16}"><i ></i> OPT</a>
-                    <a routerLink="/workday" (click)="activeLink=17" class="list-group-item small" [ngClass]="{'active' : activeLink==17}"><i ></i> WorkDay</a>
-                    <a routerLink="/khronos" (click)="activeLink=18" class="list-group-item small" [ngClass]="{'active' : activeLink==18}"><i ></i> Khronos</a>
-                    <a routerLink="/contacts" (click)="activeLink=19" class="list-group-item small" [ngClass]="{'active' : activeLink==19}"><i ></i> Contact Numbers</a>
+                    <a [routerLink]="['opt']" (click)="activeLink=16" class="list-group-item small" [ngClass]="{'active' : activeLink==16}"><i ></i> OPT</a>
+                    <a [routerLink]="['workday']" (click)="activeLink=17" class="list-group-item small" [ngClass]="{'active' : activeLink==17}"><i ></i> WorkDay</a>
+                    <a [routerLink]="['khronos']" (click)="activeLink=18" class="list-group-item small" [ngClass]="{'active' : activeLink==18}"><i ></i> Khronos</a>
+                    <a [routerLink]="['contacts']" (click)="activeLink=19" class="list-group-item small" [ngClass]="{'active' : activeLink==19}"><i ></i> Contact Numbers</a>
                 </div>
                 <!--This button displays when in small screen mode-->
                 <div class="dropdown">
-                    <a (click)="routeWOUserName('opt'); activeLink=16;" class="list-group-item logo-mini">
+                    <a (click)="routeToPath('workplace/opt'); activeLink=16;" class="list-group-item logo-mini">
                         <i class="fa fa-wrench fa-lg"></i>
                     </a>
                     <ul class="dropdown-menu">
-                        <li (click)="routeWOUserName('opt'); activeLink=16;" class="dropdown-header">DIS Tools</li>
-                        <li><a routerLink="/opt" (click)="activeLink=16" [ngClass]="{'active' : activeLink==16}"><i ></i> OPT</a></li>
-                        <li><a routerLink="/workday" (click)="activeLink=17" [ngClass]="{'active' : activeLink==17}"><i ></i> WorkDay</a></li>
-                        <li><a routerLink="/khronos" (click)="activeLink=18" [ngClass]="{'active' : activeLink==18}"><i ></i> Khronos</a></li>
-                        <li><a routerLink="/contacts" (click)="activeLink=19" [ngClass]="{'active' : activeLink==19}"><i ></i> Contact Numbers</a></li>
+                        <li (click)="routeToPath('workplace/opt');activeLink=16;" class="dropdown-header">DIS Tools</li>
+                        <li><a [routerLink]="['opt']" (click)="activeLink=16" [ngClass]="{'active' : activeLink==16}"><i ></i> OPT</a></li>
+                        <li><a [routerLink]="['workday']" (click)="activeLink=17" [ngClass]="{'active' : activeLink==17}"><i ></i> WorkDay</a></li>
+                        <li><a [routerLink]="['khronos']" (click)="activeLink=18" [ngClass]="{'active' : activeLink==18}"><i ></i> Khronos</a></li>
+                        <li><a [routerLink]="['contacts']" (click)="activeLink=19" [ngClass]="{'active' : activeLink==19}"><i ></i> Contact Numbers</a></li>
                     </ul>
                 </div>
                 <!--DIS Tools-->

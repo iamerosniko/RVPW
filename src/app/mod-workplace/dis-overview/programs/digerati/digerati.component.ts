@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StaticResources } from '../../../../com_entities/static-resources';
 
 @Component({
   selector: 'app-digerati',
@@ -9,7 +10,11 @@ export class DigeratiComponent implements OnInit {
 
   constructor() { }
 
+  breadcrumbs =['DIS Overview','Programs'  ,'Digerati'];
+  slides:any;
+
   ngOnInit() {
+    this.slides=StaticResources.DIGERATI();
   }
 
 }

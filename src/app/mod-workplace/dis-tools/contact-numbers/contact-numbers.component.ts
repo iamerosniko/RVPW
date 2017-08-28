@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StaticResources } from '../../../com_entities/static-resources';
 
 @Component({
   selector: 'app-contact-numbers',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class ContactNumbersComponent implements OnInit {
 
   constructor() { }
-
+  
   ngOnInit() {
   }
 

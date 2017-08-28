@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StaticResources } from '../../../com_entities/static-resources';
 
 @Component({
   selector: 'app-opt',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class OptComponent implements OnInit {
 
   constructor() { }
-
+  path:string=StaticResources.OPT;
   ngOnInit() {
   }
 

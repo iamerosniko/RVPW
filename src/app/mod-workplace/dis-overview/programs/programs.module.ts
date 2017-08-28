@@ -6,9 +6,10 @@ import { CareersComponent } from './careers/careers.component';
 import { MotivateComponent } from './motivate/motivate.component';
 import { DigeratiComponent } from './digerati/digerati.component';
 import { ModCommonModule } from '../../../mod-common/mod-common.module';
+import { ProgramsRouting } from './programs-routing';
 @NgModule({
   imports: [
-    CommonModule,ModCommonModule
+    CommonModule,ProgramsRouting,ModCommonModule
   ],
   declarations: [AspireComponent, CaresComponent, CareersComponent, MotivateComponent, DigeratiComponent]
 })
