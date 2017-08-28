@@ -9,6 +9,7 @@ import { StaticResources } from '../../../com_entities/static-resources';
 export class KhronosComponent implements OnInit {
 
   constructor() { }
+  breadcrumbs =['DIS Tools' ,'Khronos'];
   path:string=StaticResources.KHRONOS;
   ngOnInit() {
   }

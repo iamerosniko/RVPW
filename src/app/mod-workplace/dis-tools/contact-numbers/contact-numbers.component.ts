@@ -9,8 +9,12 @@ import { StaticResources } from '../../../com_entities/static-resources';
 export class ContactNumbersComponent implements OnInit {
 
   constructor() { }
-  
+
+  breadcrumbs =['DIS Tools' ,'Contact Numbers'];
+  slides:any;
+
   ngOnInit() {
+    this.slides=StaticResources.CONTACTS();
   }
 
 }

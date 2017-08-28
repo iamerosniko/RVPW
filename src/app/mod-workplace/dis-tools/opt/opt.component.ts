@@ -9,6 +9,7 @@ import { StaticResources } from '../../../com_entities/static-resources';
 export class OptComponent implements OnInit {
 
   constructor() { }
+  breadcrumbs =['DIS Tools' ,'OPT'];
   path:string=StaticResources.OPT;
   ngOnInit() {
   }

@@ -9,6 +9,7 @@ import { StaticResources } from '../../../com_entities/static-resources';
 export class WorkdayComponent implements OnInit {
 
   constructor() { }
+  breadcrumbs =['DIS Tools' ,'Workday'];
   path:string=StaticResources.WORKDAY;
   ngOnInit() {
   }
