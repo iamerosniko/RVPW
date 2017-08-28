@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StaticResources } from '../../../com_entities/static-resources';
 
 @Component({
   selector: 'app-info-sec',
@@ -9,7 +10,12 @@ export class InfoSecComponent implements OnInit {
 
   constructor() { }
 
+  breadcrumbs =['Policies' ,'Information Security'];
+  
+  path:string=StaticResources.INFORMATIONSECURITY;
+
   ngOnInit() {
+    
   }
 
 }

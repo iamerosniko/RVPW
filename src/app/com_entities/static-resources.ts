@@ -85,4 +85,10 @@ export class StaticResources {
         ];
     }
 
+    // Policies
+    public static PRIVACYPOLICY="assets/workplace/policies/Privacy Policy_CDN, Other Asia and Support_08-2012.pdf";
+    public static INFORMATIONSECURITY="assets/workplace/policies/Information Security_Other Asia and Support.pdf";
+    public static HOUSERULES="assets/workplace/policies/WORK RULES.pdf";
+    public static VACATIONLEAVE="assets/workplace/policies/VACATION LEAVE.pdf";
+    public static BEREAVEMENTPOLICY="assets/workplace/policies/Bereavement Policy.pdf";
 }

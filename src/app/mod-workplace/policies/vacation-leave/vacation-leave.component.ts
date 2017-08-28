@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StaticResources } from '../../../com_entities/static-resources';
 
 @Component({
   selector: 'app-vacation-leave',
@@ -9,6 +10,8 @@ export class VacationLeaveComponent implements OnInit {
 
   constructor() { }
 
+  breadcrumbs =['Policies' ,'Vacation Leave'];
+  path:string=StaticResources.VACATIONLEAVE;
   ngOnInit() {
   }
 

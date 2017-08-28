@@ -132,28 +132,28 @@
                 <!--DIS Tools-->
                 <!--Policies-->
                 <!--This button displays when in large screen mode-->
-                <a (click)="routeWOUserName('work-rule'); activeLink=20;" class="list-group-item accordion-toggle logo-lg" data-toggle="collapse" data-target="#policies" data-parent="#accordion">
+                <a (click)="routeToPath('workplace/house-rules'); activeLink=22;" class="list-group-item accordion-toggle logo-lg" data-toggle="collapse" data-target="#policies" data-parent="#accordion">
                     <i class="fa fa-book"></i> Policies
                 </a>
                 <div id="policies" class="sublinks collapse">
-                    <a routerLink="/privacy-policy" (click)="activeLink=20" class="list-group-item small" [ngClass]="{'active' : activeLink==20}"><i ></i> Privacy Policy</a>
-                    <a routerLink="/information-security" (click)="activeLink=21" class="list-group-item small" [ngClass]="{'active' : activeLink==21}"><i ></i> Information Security</a>
-                    <a routerLink="/work-rule" (click)="activeLink=22" class="list-group-item small" [ngClass]="{'active' : activeLink==22}"><i ></i> House Rules</a>
-                    <a routerLink="/vacation-leave" (click)="activeLink=23" class="list-group-item small" [ngClass]="{'active' : activeLink==23}"><i ></i> Vacation Leave</a>
-                    <a routerLink="/bereavement-policy" (click)="activeLink=24" class="list-group-item small" [ngClass]="{'active' : activeLink==24}"><i ></i> Bereavement Policy</a>
+                    <a [routerLink]="['privacy-policy']" (click)="activeLink=20" class="list-group-item small" [ngClass]="{'active' : activeLink==20}"><i ></i> Privacy Policy</a>
+                    <a [routerLink]="['information-security']" (click)="activeLink=21" class="list-group-item small" [ngClass]="{'active' : activeLink==21}"><i ></i> Information Security</a>
+                    <a [routerLink]="['house-rules']" (click)="activeLink=22" class="list-group-item small" [ngClass]="{'active' : activeLink==22}"><i ></i> House Rules</a>
+                    <a [routerLink]="['vacation-leave']" (click)="activeLink=23" class="list-group-item small" [ngClass]="{'active' : activeLink==23}"><i ></i> Vacation Leave</a>
+                    <a [routerLink]="['bereavement']" (click)="activeLink=24" class="list-group-item small" [ngClass]="{'active' : activeLink==24}"><i ></i> Bereavement Policy</a>
                 </div>
                 <!--This button displays when in small screen mode-->
                 <div class="dropdown">
-                    <a click="routeWOUserName('work-rule'); activeLink=20;" class="list-group-item logo-mini">
+                    <a click="routeToPath('workplace/house-rules'); activeLink=22;" class="list-group-item logo-mini">
                         <i class="fa fa-book fa-lg"></i>
                     </a>
                     <ul class="dropdown-menu">
-                        <li (click)="routeWOUserName('work-rule'); activeLink=20;" class="dropdown-header">Policies</li>
-                        <li><a routerLink="/privacy-policy" (click)="activeLink=20" [ngClass]="{'active' : activeLink==20}"><i ></i> Privacy Policy</a></li>
-                        <li><a routerLink="/information-security" (click)="activeLink=21" [ngClass]="{'active' : activeLink==21}"><i ></i> Information Security</a></li>
-                        <li><a routerLink="/work-rule" (click)="activeLink=22" [ngClass]="{'active' : activeLink==22}"><i ></i> House Rules</a></li>
-                        <li><a routerLink="/vacation-leave" (click)="activeLink=23" [ngClass]="{'active' : activeLink==23}"><i ></i> Vacation Leave</a></li>
-                        <li><a routerLink="/bereavement-policy" (click)="activeLink=24" [ngClass]="{'active' : activeLink==24}"><i ></i> Bereavement Policy</a></li>
+                        <li (click)="routeToPath('workplace/house-rules'); activeLink=22;" class="dropdown-header">Policies</li>
+                        <li><a [routerLink]="['privacy-policy']" (click)="activeLink=20" [ngClass]="{'active' : activeLink==20}"><i ></i> Privacy Policy</a></li>
+                        <li><a [routerLink]="['information-security']" (click)="activeLink=21" [ngClass]="{'active' : activeLink==21}"><i ></i> Information Security</a></li>
+                        <li><a [routerLink]="['house-rules']" (click)="activeLink=22" [ngClass]="{'active' : activeLink==22}"><i ></i> House Rules</a></li>
+                        <li><a [routerLink]="['vacation-leave']" (click)="activeLink=23" [ngClass]="{'active' : activeLink==23}"><i ></i> Vacation Leave</a></li>
+                        <li><a [routerLink]="['bereavement']" (click)="activeLink=24" [ngClass]="{'active' : activeLink==24}"><i ></i> Bereavement Policy</a></li>
                     </ul>
                 </div>
                 <!--Policies-->
