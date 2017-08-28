@@ -4,11 +4,12 @@ import { AspireComponent } from './aspire/aspire.component';
 import { CaresComponent } from './cares/cares.component';
 import { CareersComponent } from './careers/careers.component';
 import { MotivateComponent } from './motivate/motivate.component';
-
+import { DigeratiComponent } from './digerati/digerati.component';
+import { ModCommonModule } from '../../../mod-common/mod-common.module';
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,ModCommonModule
   ],
-  declarations: [AspireComponent, CaresComponent, CareersComponent, MotivateComponent]
+  declarations: [AspireComponent, CaresComponent, CareersComponent, MotivateComponent, DigeratiComponent]
 })
 export class ProgramsModule { }
