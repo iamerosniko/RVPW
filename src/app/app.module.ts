@@ -7,7 +7,6 @@ import { TitleModule } from './mod_title/title.module';
 import { CreateTitleModule } from './mod_create_title/create_title.module';
 import { InfoModule } from './com_info/info.module';
 import { WorkplaceModule } from './mod-workplace/workplace.module';
-
 import { AppComponent } from './app.component';
 
 @NgModule({

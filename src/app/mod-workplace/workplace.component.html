@@ -65,14 +65,14 @@
                 </div>
                 <!--This button displays when in small screen mode-->
                 <div class="dropdown">
-                    <a (click)="routeWOUserName('Team-Org'); activeLink=10;" class="list-group-item logo-mini">
+                    <a (click)="activeLink=10;" class="list-group-item logo-mini">
                         <i class="fa fa-users fa-lg"></i>
                     </a>
                     <ul class="dropdown-menu">
-                        <li (click)="routeWOUserName('Team-Org'); activeLink=10;" class="dropdown-header">Team Overview</li>
+                        <li (click)="activeLink=10;" class="dropdown-header">Team Overview</li>
                         <li><a routerLink="/Team-Org" (click)="activeLink=10" [ngClass]="{'active' : activeLink==10}"><i ></i> Team Org Chart</a></li>
                         <li class="dropdown">
-                            <a (click)="routeWOUserName('Team-Services'); activeLink=11;"><i ></i> Team Information<span class="glyphicon glyphicon-chevron-right pull-right" style="padding-top:2px;"></span></a>
+                            <a (click)="activeLink=11;"><i ></i> Team Information<span class="glyphicon glyphicon-chevron-right pull-right" style="padding-top:2px;"></span></a>
                             <ul class="dropdown-menu">
                                 <!--<li><a routerLink="/Team-JobDesc"><i ></i> Job Management Program</a></li>-->
                                 <li><a routerLink="/Team-Services" (click)="activeLink=11" [ngClass]="{'active' : activeLink==11}"><i ></i> Services</a></li>
@@ -84,7 +84,7 @@
                 <!--Team Overview-->
                 <!--Leaders Video-->
                 <!--This button displays when in large screen mode-->
-                <a (click)="routeWOUserName('FH'); activeLink=13;" class="list-group-item accordion-toggle logo-lg" data-toggle="collapse" data-target="#leadvideo" data-parent="#accordion">
+                <a (click)=" activeLink=13;" class="list-group-item accordion-toggle logo-lg" data-toggle="collapse" data-target="#leadvideo" data-parent="#accordion">
                     <i class="fa fa-film"></i> Leaders' Video
                 </a>
                 <div id="leadvideo" class="sublinks collapse">
@@ -94,7 +94,7 @@
                 </div>
                 <!--This button displays when in small screen mode-->
                 <div class="dropdown">
-                    <a (click)="routeWOUserName('FH'); activeLink=13;" class="list-group-item logo-mini">
+                    <a (click)="activeLink=13;" class="list-group-item logo-mini">
                         <i class="fa fa-film fa-lg"></i>
                     </a>
                     <ul class="dropdown-menu">
@@ -107,7 +107,7 @@
                 <!--Leaders Video-->
                 <!--DIS Tools-->
                 <!--This button displays when in large screen mode-->
-                <a (click)="routeToPath('workplace/opt'); activeLink=16;" class="list-group-item accordion-toggle logo-lg" data-toggle="collapse" data-target="#distools" data-parent="#accordion">
+                <a (click)="activeLink=16; routeToPath('workplace/opt'); " class="list-group-item accordion-toggle logo-lg" data-toggle="collapse" data-target="#distools" data-parent="#accordion">
                     <i class="fa fa-wrench"></i> DIS Tools
                 </a>
                 <div id="distools" class="sublinks collapse">
@@ -159,16 +159,16 @@
                 <!--Policies-->
                 <!--Exam-->
                 <!--This button displays when in large screen mode-->
-                <a (click)="routeWithUserName('Quiz')" class="list-group-item logo-lg" data-toggle="collapse" data-target="#exam" data-parent="#accordion">
+                <a  class="list-group-item logo-lg" data-toggle="collapse" data-target="#exam" data-parent="#accordion">
                     <i class="fa fa-edit"></i> Take the Exam
                 </a>
                 <!--This button displays when in small screen mode-->
                 <div class="dropdown">
-                    <a (click)="routeWithUserName('Quiz')"  class="list-group-item logo-mini">
+                    <a  class="list-group-item logo-mini">
                         <i class="fa fa-edit fa-lg"></i>
                     </a>
                     <ul class="dropdown-menu">
-                        <li (click)="routeWithUserName('Quiz')" class="dropdown-header">Take the Exam</li>
+                        <li class="dropdown-header">Take the Exam</li>
                     </ul>
                 </div>
                 <!--Exam-->
