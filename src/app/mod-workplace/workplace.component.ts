@@ -11,6 +11,7 @@ export class WorkplaceComponent implements OnInit {
   }
   
   ngOnInit() {
+    this.checkSession();
     this.updateActiveLink();
   }
 
@@ -35,5 +36,12 @@ export class WorkplaceComponent implements OnInit {
         break; 
       } 
     } 
+  }
+
+  checkSession(){
+    console.log(sessionStorage.getItem('user'));
+    if(sessionStorage.getItem('user')==null){
+      this.routeToPath('welcome');
+    }
   }
 }

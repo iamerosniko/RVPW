@@ -6,9 +6,8 @@ import { Component,OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'app';
-  sample={'ss':1,'ss2':2};
+  //sample={'ss':1,'ss2':2};
   ngOnInit(){
-    sessionStorage.setItem('user',JSON.stringify(this.sample));
+    //sessionStorage.setItem('user',JSON.stringify(this.sample));
   }
 }
