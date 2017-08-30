@@ -16,7 +16,7 @@
                     <a [routerLink]="['org-chart']" class="list-group-item small" (click)="activeLink=2" [ngClass]="{'active' : activeLink==2}"><i ></i> Organizational Chart</a>
                     <a [routerLink]="['strategies']"  class="list-group-item small" (click)="activeLink=3" [ngClass]="{'active' : activeLink==3}"><i ></i> Strategies</a>
                     <a [routerLink]="['functional-towers']"  class="list-group-item small" (click)="activeLink=4" [ngClass]="{'active' : activeLink==4}"><i ></i> Functional Towers</a>
-                    <a (click)="activeLink=5; routeToPath('workplace/aspire')" class="list-group-item small accordion-toggle" data-toggle="collapse" data-target="#programs_lg"><i ></i> Programs</a>
+                    <a (click)="routeToPath('workplace/aspire'); activeLink=5;" class="list-group-item small accordion-toggle" data-toggle="collapse" data-target="#programs_lg"><i ></i> Programs</a>
                     <div id="programs_lg" class="sublinks collapse">
                         <a [routerLink]="['aspire']" (click)="activeLink=5" class="list-group-item small" [ngClass]="{'active' : activeLink==5}"><i ></i> Aspire</a>
                         <a [routerLink]="['cares']" (click)="activeLink=6" class="list-group-item small"  [ngClass]="{'active' : activeLink==6}"><i ></i> Cares</a>
@@ -56,7 +56,7 @@
                 </a>
                 <div id="teamoverwiew" class="sublinks collapse">
                     <a routerLink="/Team-Org" class="list-group-item small" (click)="activeLink=10" [ngClass]="{'active' : activeLink==10}"><i ></i> Team Org Chart</a>
-                    <a (click)="routeWOUserName('Team-Services'); activeLink=11;"  class="list-group-item small accordion-toggle" data-toggle="collapse" data-target="#jobmgtprog_lg"><i ></i> Team Information</a>
+                    <a (click)="routeToPath('workplace/mission-vision'); activeLink=11;" class="list-group-item small accordion-toggle" data-toggle="collapse" data-target="#jobmgtprog_lg"><i ></i> Team Information</a>
                     <div id="jobmgtprog_lg" class="sublinks collapse">
                         <!--<a routerLink="/Team-JobDesc" class="list-group-item small"><i ></i> Job Management Program</a>-->
                         <a routerLink="/Team-Services" (click)="activeLink=11" class="list-group-item small" [ngClass]="{'active' : activeLink==11}"><i ></i> Services</a>

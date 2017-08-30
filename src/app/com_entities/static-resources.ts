@@ -41,35 +41,35 @@ export class StaticResources {
     public static ASPIRE():any[]{
         return [
             //resources/workplace/01DIS OVERVIEW/02-Organizational Chart.jpg
-            { image : 'assets/workplace/dis-overview/programs/Aspire.JPG' }
+            { image : 'assets/workplace/dis-overview/disprograms/aspire.jpg' }
         ];
     }
 
     public static CAREERS():any[]{
         return [
             //resources/workplace/01DIS OVERVIEW/02-Organizational Chart.jpg
-            { image : 'assets/workplace/dis-overview/programs/Careers.JPG' }
+            { image : 'assets/workplace/dis-overview/disprograms/careers.jpg' }
         ];
     }
 
     public static CARES():any[]{
         return [
             //resources/workplace/01DIS OVERVIEW/02-Organizational Chart.jpg
-            { image : 'assets/workplace/dis-overview/programs/Cares.JPG' }
+            { image : 'assets/workplace/dis-overview/disprograms/cares.jpg' }
         ];
     }
 
     public static DIGERATI():any[]{
         return [
             //resources/workplace/01DIS OVERVIEW/02-Organizational Chart.jpg
-            { image : 'assets/workplace/dis-overview/programs/Digerati.JPG' }
+            { image : 'assets/workplace/dis-overview/disprograms/digerati.jpg' }
         ];
     }
 
     public static MOTIVATE():any[]{
         return [
             //resources/workplace/01DIS OVERVIEW/02-Organizational Chart.jpg
-            { image : 'assets/workplace/dis-overview/programs/Motivate.JPG' }
+            { image : 'assets/workplace/dis-overview/disprograms/motivate.jpg' }
         ];
     }
 

@@ -6,6 +6,11 @@ import { MissionVisionComponent } from './mission-vision/mission-vision.componen
 import { FunctionalTowersComponent } from './functional-towers/functional-towers.component';
 import { StrategiesComponent } from './strategies/strategies.component';
 
+import { AspireComponent } from './programs/aspire/aspire.component';
+import { CaresComponent } from './programs/cares/cares.component';
+import { CareersComponent } from './programs/careers/careers.component';
+import { MotivateComponent } from './programs/motivate/motivate.component';
+import { DigeratiComponent } from './programs/digerati/digerati.component';
 import { WorkplaceComponent } from '../workplace.component';
 const routes: Routes = [
     // { path: 'title', component: TitleComponent,
@@ -21,6 +26,11 @@ const routes: Routes = [
             { path:'org-chart', component: OrgChartComponent },
             { path:'strategies', component: StrategiesComponent },
             { path:'functional-towers', component: FunctionalTowersComponent },
+            { path:'aspire', component: AspireComponent },
+            { path:'cares', component: CaresComponent },
+            { path:'careers', component: CareersComponent },
+            { path:'motivate', component: MotivateComponent },
+            { path:'digerati', component: DigeratiComponent },
         ]
     }
     

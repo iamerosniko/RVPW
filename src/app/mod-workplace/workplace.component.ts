@@ -8,7 +8,7 @@ import { Router }  from '@angular/router';
 export class WorkplaceComponent implements OnInit {
 
   constructor(private router: Router) { }
-
+  activeLink:number=1;
   ngOnInit() {
   }
 
