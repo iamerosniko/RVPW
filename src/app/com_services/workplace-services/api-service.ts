@@ -6,8 +6,9 @@ import { AppSettings } from '../../com_entities/app-settings';
 export class ApiService {
     private headers = new Headers({'Content-Type': 'application/json'});
     private apiUrl = '';
-
-    constructor(private controller:string,private http: Http){
+    private http: Http;
+    
+    constructor(private controller:string){
         this.apiUrl=AppSettings.GETAPIURL(controller); 
     }
 

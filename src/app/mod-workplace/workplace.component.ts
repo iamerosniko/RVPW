@@ -19,7 +19,7 @@ export class WorkplaceComponent implements OnInit {
     this.router.navigate(['/'+path]);
   }
 
-  updateActiveLink(){
+  async updateActiveLink(){
     switch(this.router.url) { 
       case "/workplace/opt": { 
         //statements; 
@@ -38,10 +38,10 @@ export class WorkplaceComponent implements OnInit {
     } 
   }
 
-  checkSession(){
+  async checkSession(){
     console.log(sessionStorage.getItem('user'));
     if(sessionStorage.getItem('user')==null){
-      this.routeToPath('welcome');
+      await this.routeToPath('welcome');
     }
   }
 }
