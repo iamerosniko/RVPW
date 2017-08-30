@@ -4,15 +4,17 @@ import { Headers, Http } from '@angular/http';
 import { AppSettings } from '../../com_entities/app-settings';
 @Injectable()
 export class ApiService {
-    private headers = new Headers({'Content-Type': 'application/json'});
+    private headers = new Headers({'Content-Type': 'application/json','Access-Control-Allow-Origin' : 'http://localhost:4200'});
     private apiUrl = '';
-    private http: Http;
     
-    constructor(private controller:string){
+    
+    constructor(private controller:string,private http: Http){
         this.apiUrl=AppSettings.GETAPIURL(controller); 
+        
     }
 
     getAll(): Promise<any[]> {
+        console.log('here')
         return this.http
             .get(this.apiUrl, {headers: this.headers})
             .toPromise()

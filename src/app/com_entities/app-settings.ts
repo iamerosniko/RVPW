@@ -1,5 +1,5 @@
 export class AppSettings {
-    private static CURRENT_URL = "api/"; 
+    private static CURRENT_URL = "http://localhost:61157/api/"; 
     //public static CURRENT_URL = "https://x.azurewebsites.net/api/"; 
     //public static CURRENT_URL = "https://x.azurewebsites.net/api/"; 
     public static GETAPIURL(controller:string):string{
@@ -11,3 +11,4 @@ export class AppSettings {
     }
 }
 
+    
