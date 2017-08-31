@@ -4,6 +4,7 @@ import { Headers, Http } from '@angular/http';
 import { ApiService } from '../../com_services/workplace-services/api-service';
 import { AppSettings } from '../../com_entities/app-settings';
 
+import { Router }  from '@angular/router';
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
@@ -15,7 +16,8 @@ export class WelcomeComponent implements OnInit{
   tempuser:TempUser=new TempUser(0,"","","",0,"",0,0,true);
 
   constructor(
-    private apiService:ApiService
+    private apiService:ApiService,
+    private router: Router
   ) { 
   }
 
@@ -32,12 +34,36 @@ export class WelcomeComponent implements OnInit{
   //where controller is the name of controller in api
   async getAll(controller:string){
     this.apiService.apiUrl=AppSettings.GETAPIURL(controller);
-    var result=await this.apiService.getAll()
+    var result=await this.apiService.getAll();
     return new Promise<any[]>((resolve)=> resolve(result));
   }
 
-  // async getOne(controller:string,ID){
+  async postData(controller:string,data:any){
+    this.apiService.apiUrl=AppSettings.GETAPIURL(controller);
+    var result=await this.apiService.postData(data);
+    return new Promise<any>((resolve)=> resolve(result));
+  }
 
-  // }
-  
+  async submit(){
+    if(this.tempuser.FirstName=="" ||
+    this.tempuser.LastName=="" ||
+    this.tempuser.TeamID==""||
+    this.tempuser.LeaderID==0){
+      alert("Some fields are not supplied.")
+    }
+    else{
+      this.tempuser=<TempUser> await this.postData('TemporaryUsers',this.tempuser);
+      // await console.log(this.tempuser);
+      sessionStorage.setItem('user',JSON.stringify(this.tempuser));
+      this.routeToPath('workplace');
+    }
+  }
+
+  routeToPath(path:string){
+    this.router.navigate(['/'+path]);
+  }
+
+  async getResources(){
+
+  }
 }

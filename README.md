@@ -17,7 +17,7 @@ $ ng generate component NameOfNewwComponent
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 $ ng build --target=production --base-href '/' --aot --build-optimizer
-$ ng build --target=development --base-href '/' 
+$ ng build --target=development --base-href '/' --aot --build-optimizer
 
 
 JIT - Compile TypeScript just in time for executing it.

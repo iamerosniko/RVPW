@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router,ActivatedRoute }  from '@angular/router';
+import { Router }  from '@angular/router';
+import { TempUser } from '../com_entities/workplace-entities';
 @Component({
   selector: 'app-workplace',
   templateUrl: './workplace.component.html',
@@ -7,7 +8,8 @@ import { Router,ActivatedRoute }  from '@angular/router';
 })
 export class WorkplaceComponent implements OnInit {
   activeLink=1;
-  constructor(private router: Router,ar:ActivatedRoute) { 
+  currentUser:TempUser;
+  constructor(private router: Router) { 
   }
   
   ngOnInit() {
@@ -39,9 +41,14 @@ export class WorkplaceComponent implements OnInit {
   }
 
   async checkSession(){
-    console.log(sessionStorage.getItem('user'));
-    if(sessionStorage.getItem('user')==null){
+    var user = sessionStorage.getItem('user');
+    console.log(user);
+    if(user==null){
       await this.routeToPath('welcome');
+    }
+    else{
+      this.currentUser=JSON.parse(user)
+      console.log(this.currentUser);
     }
   }
 }
