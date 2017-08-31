@@ -15,14 +15,8 @@ export class WelcomeComponent implements OnInit{
   tempuser:TempUser=new TempUser(0,"","","",0,"",0,0,true);
 
   constructor(
-    private teamSvc:ApiService,
-    private leaderSvc:ApiService,
-    private tempUserSvc:ApiService
-
+    private apiService:ApiService
   ) { 
-    teamSvc.apiUrl=AppSettings.GETAPIURL('Teams');
-    leaderSvc.apiUrl=AppSettings.GETAPIURL('Leaders');
-    tempUserSvc.apiUrl=AppSettings.GETAPIURL('TemporaryUsers');
   }
 
   ngOnInit() {
@@ -31,13 +25,14 @@ export class WelcomeComponent implements OnInit{
   }
 
   async getDependencies(){
-    this.leaderSvc.getAll().then(a=>{
-      console.log(
-        a
-      )
-    }).catch(()=>{
-      console.log('saf')
-    })
-    console.log(await this.leaderSvc.getAll());
+    this.leaders=<Leader[]>await this.getAll('Leaders');
+    this.teams=<Team[]>await this.getAll('Teams');
   }
+
+  async getAll(controller:string){
+    this.apiService.apiUrl=AppSettings.GETAPIURL(controller);
+    var result=await this.apiService.getAll()
+    return new Promise<any[]>((resolve)=> resolve(result));
+  }
+  
 }
