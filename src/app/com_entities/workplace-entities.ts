@@ -1,7 +1,3 @@
-export class WorkplaceEntities {
-
-}
-
 export class Team {
     constructor (
         public TeamID : string,

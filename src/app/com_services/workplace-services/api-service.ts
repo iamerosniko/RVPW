@@ -2,19 +2,17 @@ import 'rxjs/add/operator/toPromise';
 import { Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
 import { AppSettings } from '../../com_entities/app-settings';
+
 @Injectable()
 export class ApiService {
-    private headers = new Headers({'Content-Type': 'application/json','Access-Control-Allow-Origin' : 'http://localhost:4200'});
-    private apiUrl = '';
-    
-    
-    constructor(private controller:string,private http: Http){
-        this.apiUrl=AppSettings.GETAPIURL(controller); 
+    private headers = new Headers({'Content-Type': 'application/json'});
+    public apiUrl = '';
+
+    constructor(private http:Http){
         
     }
 
-    getAll(): Promise<any[]> {
-        console.log('here')
+    getAll(): Promise<any[]> {  
         return this.http
             .get(this.apiUrl, {headers: this.headers})
             .toPromise()
