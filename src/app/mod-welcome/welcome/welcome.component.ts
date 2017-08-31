@@ -29,10 +29,15 @@ export class WelcomeComponent implements OnInit{
     this.teams=<Team[]>await this.getAll('Teams');
   }
 
+  //where controller is the name of controller in api
   async getAll(controller:string){
     this.apiService.apiUrl=AppSettings.GETAPIURL(controller);
     var result=await this.apiService.getAll()
     return new Promise<any[]>((resolve)=> resolve(result));
   }
+
+  // async getOne(controller:string,ID){
+
+  // }
   
 }
