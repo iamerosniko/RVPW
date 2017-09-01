@@ -24,7 +24,9 @@ export class Leader {
     constructor (
         public LeaderID : number,
         public LeaderName : string,
-        public ManagerID : number
+        public ManagerID : number,
+        public LeaderResourceID :string,
+        public ManagerResourceID:string
     ){}
 }
 
@@ -51,8 +53,10 @@ export class Answer {
 
 export class Resource {
     constructor (
+        public ResourceID : string,
+        public ResourceName:string,
         public ResourcePath : string,
         public ResourceCategory : string,
-        public ResourceContent:string
+        public IsUrl : boolean
     ){}
 }

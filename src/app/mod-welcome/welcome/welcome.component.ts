@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TempUser,Leader,Team } from '../../com_entities/workplace-entities';
+import { TempUser,Leader,Team,Resource } from '../../com_entities/workplace-entities';
 import { Headers, Http } from '@angular/http';
 import { ApiService } from '../../com_services/workplace-services/api-service';
 import { AppSettings } from '../../com_entities/app-settings';
@@ -14,7 +14,7 @@ export class WelcomeComponent implements OnInit{
   teams:Team[]=[];
   leaders:Leader[]=[];
   tempuser:TempUser=new TempUser(0,"","","",0,"",0,0,true);
-
+  resource:Resource[]=[];
   constructor(
     private apiService:ApiService,
     private router: Router
@@ -29,6 +29,7 @@ export class WelcomeComponent implements OnInit{
   async getDependencies(){
     this.leaders=<Leader[]>await this.getAll('Leaders');
     this.teams=<Team[]>await this.getAll('Teams');
+    this.resource=<Resource[]>await this.getAll('Resources');
   }
 
   //where controller is the name of controller in api
@@ -64,6 +65,12 @@ export class WelcomeComponent implements OnInit{
   }
 
   async getResources(){
-
+    var leader = this.leaders.find(x=>x.LeaderID==this.tempuser.LeaderID);
+    var leaderResourceID = leader.LeaderResourceID;
+    var managerResourceID = leader.ManagerResourceID;
+    var leaderResource = this.resource.find(x=>x.ResourceID==leaderResourceID);
+    var managerResource = this.resource.find(x=>x.ResourceID==managerResourceID);
+    sessionStorage.setItem('leader-video',leaderResource.ResourcePath==null?null:leaderResource.ResourcePath);
+    sessionStorage.setItem('manager-video',managerResource.ResourcePath==null?null:managerResource.ResourcePath);
   }
 }
