@@ -53,10 +53,7 @@ export class WelcomeComponent implements OnInit{
       alert("Some fields are not supplied.")
     }
     else{
-      this.tempuser=<TempUser> await this.postData('TemporaryUsers',this.tempuser);
-      // await console.log(this.tempuser);
-      sessionStorage.setItem('user',JSON.stringify(this.tempuser));
-      this.routeToPath('workplace');
+      this.getResources(); 
     }
   }
 
@@ -65,6 +62,10 @@ export class WelcomeComponent implements OnInit{
   }
 
   async getResources(){
+    this.tempuser=<TempUser> await this.postData('TemporaryUsers',this.tempuser);
+    // await console.log(this.tempuser);
+    sessionStorage.setItem('user',JSON.stringify(this.tempuser));
+    this.routeToPath('workplace');
     var leader = this.leaders.find(x=>x.LeaderID==this.tempuser.LeaderID);
     var leaderResourceID = leader.LeaderResourceID;
     var managerResourceID = leader.ManagerResourceID;
