@@ -60,3 +60,11 @@ export class Resource {
         public IsUrl : boolean
     ){}
 }
+
+export class TeamResource {
+    constructor (
+        public TeamResourceID : number,
+        public TeamID:string,
+        public ResourceID : string
+    ){}
+}

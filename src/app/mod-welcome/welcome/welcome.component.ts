@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TempUser,Leader,Team,Resource } from '../../com_entities/workplace-entities';
+import { TempUser,Leader,Team,Resource,TeamResource } from '../../com_entities/workplace-entities';
 import { Headers, Http } from '@angular/http';
 import { ApiService } from '../../com_services/workplace-services/api-service';
 import { AppSettings } from '../../com_entities/app-settings';
@@ -15,6 +15,8 @@ export class WelcomeComponent implements OnInit{
   leaders:Leader[]=[];
   tempuser:TempUser=new TempUser(0,"","","",0,"",0,0,true);
   resource:Resource[]=[];
+  teamResource:TeamResource[]=[];
+
   constructor(
     private apiService:ApiService,
     private router: Router
@@ -30,6 +32,7 @@ export class WelcomeComponent implements OnInit{
     this.leaders=<Leader[]>await this.getAll('Leaders');
     this.teams=<Team[]>await this.getAll('Teams');
     this.resource=<Resource[]>await this.getAll('Resources');
+    this.teamResource=<TeamResource[]>await this.getAll('TeamResources');
   }
 
   //where controller is the name of controller in api
@@ -63,15 +66,31 @@ export class WelcomeComponent implements OnInit{
 
   async getResources(){
     this.tempuser=<TempUser> await this.postData('TemporaryUsers',this.tempuser);
-    // await console.log(this.tempuser);
-    sessionStorage.setItem('user',JSON.stringify(this.tempuser));
-    this.routeToPath('workplace');
+    
     var leader = this.leaders.find(x=>x.LeaderID==this.tempuser.LeaderID);
     var leaderResourceID = leader.LeaderResourceID;
     var managerResourceID = leader.ManagerResourceID;
     var leaderResource = this.resource.find(x=>x.ResourceID==leaderResourceID);
     var managerResource = this.resource.find(x=>x.ResourceID==managerResourceID);
-    sessionStorage.setItem('leader-video',leaderResource.ResourcePath==null?null:leaderResource.ResourcePath);
-    sessionStorage.setItem('manager-video',managerResource.ResourcePath==null?null:managerResource.ResourcePath);
+    var tempTeamSrc = this.teamResource.filter(x=>x.TeamID==this.tempuser.TeamID);
+    var teamResources:Resource[]=[];
+
+    // console.log(tempTeamSrc);
+
+    for(var i = 0 ; i<tempTeamSrc.length;i++){
+      var temp=tempTeamSrc[i];
+      var res=this.resource.find(x=>x.ResourceID==temp.ResourceID);
+      console.log(res);
+      res!=null ? teamResources=teamResources.concat(res) : null;
+    }
+    // console.log(teamResources);
+
+    sessionStorage.setItem('workplace_user',JSON.stringify(this.tempuser));
+    sessionStorage.setItem('workplace_team-resources',JSON.stringify(teamResources));
+    sessionStorage.setItem('workplace_leader-video',leaderResource.ResourcePath==null?null:leaderResource.ResourcePath);
+    sessionStorage.setItem('workplace_manager-video',managerResource.ResourcePath==null?null:managerResource.ResourcePath);
+    this.routeToPath('workplace');
   }
+
+
 }

@@ -22,7 +22,22 @@ export class WorkplaceComponent implements OnInit {
   }
 
   async updateActiveLink(){
-    switch(this.router.url) { 
+    switch(this.router.url) {
+      case "/workplace/team": { 
+        //statements; 
+        this.activeLink=10;
+        break; 
+      } 
+      case "/workplace/team-services": { 
+        //statements; 
+        this.activeLink=11;
+        break; 
+      } 
+      case "/workplace/function-head": { 
+        //statements; 
+        this.activeLink=13;
+        break; 
+      } 
       case "/workplace/opt": { 
         //statements; 
         this.activeLink=16;
@@ -41,14 +56,14 @@ export class WorkplaceComponent implements OnInit {
   }
 
   async checkSession(){
-    var user = sessionStorage.getItem('user');
-    console.log(user);
+    var user = sessionStorage.getItem('workplace_user');
+    // console.log(user);
     if(user==null){
       await this.routeToPath('welcome');
     }
     else{
       this.currentUser=JSON.parse(user)
-      console.log(this.currentUser);
+      // console.log(this.currentUser);
     }
   }
 }

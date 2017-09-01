@@ -9,6 +9,8 @@ export class OrgComponent implements OnInit {
 
   constructor() { }
 
+  breadcrumbs =['Team Overview' ,'Team Org Chart'];
+  slides:any;
   ngOnInit() {
   }
 

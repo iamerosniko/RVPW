@@ -9,7 +9,12 @@ export class ManagerComponent implements OnInit {
 
   constructor() { }
 
+  breadcrumbs =['Leaders\' Video' ,'Manager'];
+  path:string='';
   ngOnInit() {
+    if(sessionStorage.getItem('workplace_manager-video')!=null){
+      this.path=sessionStorage.getItem('workplace_manager-video');
+    }
   }
 
 }

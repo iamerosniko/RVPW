@@ -8,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class TeamLeaderComponent implements OnInit {
 
   constructor() { }
-
+  breadcrumbs =['Leaders\' Video' ,'Team Leader'];
+  path:string='';
   ngOnInit() {
+    if(sessionStorage.getItem('workplace_leader-video')!=null){
+      this.path=sessionStorage.getItem('workplace_leader-video');
+    }
   }
 
 }
