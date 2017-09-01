@@ -91,4 +91,6 @@ export class StaticResources {
     public static HOUSERULES="assets/workplace/policies/WORK RULES.pdf";
     public static VACATIONLEAVE="assets/workplace/policies/VACATION LEAVE.pdf";
     public static BEREAVEMENTPOLICY="assets/workplace/policies/Bereavement Policy.pdf";
+
+    public static FUNCTIONHEADURL="assets/workplace/leaders/denmar.mp4";
 }
