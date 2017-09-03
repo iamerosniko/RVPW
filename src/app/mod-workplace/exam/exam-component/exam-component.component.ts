@@ -25,6 +25,7 @@ export class ExamComponent implements OnInit {
     this.getDependencies();
   }
   async getDependencies(){
+    this.viewScore=this.tempUser.QuizScore>0;
     this.tempquestions=<Question[]> await this.getAll('Questions');
     this.answers=<Answer[]> await this.getAll('Answers');
     var shuffledQuestions=<Question[]> await this.shuffle(this.tempquestions);

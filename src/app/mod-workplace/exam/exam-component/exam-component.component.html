@@ -8,10 +8,10 @@
 
 <div >
   
-  <div *ngIf="viewScore && tempUser.QuizScore>0">
+  <div *ngIf="viewScore">
       your score is {{tempUser.QuizScore}}
   </div>
-  <div *ngIf="!viewScore && tempUser.QuizScore==0">
+  <div *ngIf="!viewScore">
       <div class="panel panel-default" *ngFor="let q of questions">
 
           <div class="panel-heading" >{{q.QuestionDesc}}</div>
