@@ -159,12 +159,12 @@
                 <!--Policies-->
                 <!--Exam-->
                 <!--This button displays when in large screen mode-->
-                <a  class="list-group-item logo-lg" data-toggle="collapse" data-target="#exam" data-parent="#accordion">
+                <a (click)="routeToPath('workplace/exam');" class="list-group-item logo-lg" data-toggle="collapse" data-target="#exam" data-parent="#accordion">
                     <i class="fa fa-edit"></i> Take the Exam
                 </a>
                 <!--This button displays when in small screen mode-->
                 <div class="dropdown">
-                    <a  class="list-group-item logo-mini">
+                    <a [routerLink]="['exam']" class="list-group-item logo-mini">
                         <i class="fa fa-edit fa-lg"></i>
                     </a>
                     <ul class="dropdown-menu">
