@@ -80,7 +80,7 @@ export class WelcomeComponent implements OnInit{
     for(var i = 0 ; i<tempTeamSrc.length;i++){
       var temp=tempTeamSrc[i];
       var res=this.resource.find(x=>x.ResourceID==temp.ResourceID);
-      console.log(res);
+      //console.log(res);
       res!=null ? teamResources=teamResources.concat(res) : null;
     }
     // console.log(teamResources);

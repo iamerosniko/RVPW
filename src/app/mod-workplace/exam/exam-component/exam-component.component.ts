@@ -57,7 +57,8 @@ export class ExamComponent implements OnInit {
   async submitScore(){
     this.tempUser.QuizScore=this.score;
     this.tempUser.QuizItem=this.questions.length;
-    console.log(await this.putData('TemporaryUsers',this.tempUser,this.tempUser.ID.toString()))
+    // console.log(
+    await this.putData('TemporaryUsers',this.tempUser,this.tempUser.ID.toString());
     //update sessionstorage of workplace_user
     sessionStorage.setItem('workplace_user',JSON.stringify(this.tempUser));
     this.viewScore=true;
